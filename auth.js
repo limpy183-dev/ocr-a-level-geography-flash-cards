@@ -24,6 +24,10 @@ async function authLogin(email, password) {
 async function authLoginGoogle() {
     const { data, error } = await supabaseClient.auth.signInWithOAuth({
         provider: 'google',
+        options: {
+            // This forces Supabase to send you back to the specific folder, not the 404 page
+            redirectTo: 'https://limpy183-dev.github.io/ocr-a-level-geography-flash-cards/'
+        }
     });
     if (error) throw error;
     return data;
