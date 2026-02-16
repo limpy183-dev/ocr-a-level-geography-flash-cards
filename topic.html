@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards — Topic</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
+    <div class="page-wrapper">
+        <nav class="nav-bar">
+            <a href="index.html">← All Topics</a>
+
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"
+                style="margin-left:auto; margin-right:0;">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </nav>
+
+        <header class="topic-page-header">
+            <span class="topic-emoji" id="topic-emoji"></span>
+            <h1 id="topic-name"></h1>
+            <p class="subtitle" id="topic-count"></p>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls-bar">
+            <button class="ctrl-btn active" id="btn-card-mode" onclick="setMode('card')">🃏 Cards</button>
+            <button class="ctrl-btn" id="btn-list-mode" onclick="setMode('list')">📋 List</button>
+            <button class="ctrl-btn" id="btn-shuffle" onclick="shuffleDeck()">🔀 Shuffle</button>
+            <button class="ctrl-btn accent" id="btn-reset" onclick="resetDeck()">↻ Reset</button>
+        </div>
+
+        <!-- Search in topic -->
+        <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="card-search" placeholder="Search terms in this topic...">
+        </div>
+
+        <!-- Score -->
+        <div class="score-display">
+            <span class="score-chip score-known">✓ Know: <strong id="score-known">0</strong></span>
+            <span class="score-chip score-unknown">✗ Don't Know: <strong id="score-unknown">0</strong></span>
+            <span class="score-chip score-remaining">Remaining: <strong id="score-remaining">0</strong></span>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-wrap">
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p class="progress-text" id="progress-text">0% complete</p>
+        </div>
+
+        <!-- FLASHCARD MODE -->
+        <div class="flashcard-mode" id="flashcard-mode">
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="flashcard-face flashcard-front">
+                        <span class="flashcard-label">Term</span>
+                        <div class="flashcard-term" id="card-term"></div>
+                        <span class="flashcard-hint">Click to reveal definition</span>
+                    </div>
+                    <div class="flashcard-face flashcard-back">
+                        <span class="flashcard-label">Definition</span>
+                        <div class="flashcard-definition" id="card-definition"></div>
+                        <span class="flashcard-hint">Click to flip back</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Know / Don't Know -->
+            <div class="judge-row" id="judge-row">
+                <button class="judge-btn judge-dunno" onclick="markCard(false)">✗ Don't Know</button>
+                <button class="judge-btn judge-know" onclick="markCard(true)">✓ Know It</button>
+            </div>
+
+            <!-- Nav arrows -->
+            <div class="card-nav">
+                <button class="nav-arrow" id="btn-prev" onclick="prevCard()">◀</button>
+                <div class="card-counter"><span id="current-num">1</span> <span>/ <span id="total-num">0</span></span>
+                </div>
+                <button class="nav-arrow" id="btn-next" onclick="nextCard()">▶</button>
+            </div>
+        </div>
+
+        <!-- LIST MODE -->
+        <div class="list-mode" id="list-mode"></div>
+
+        <!-- COMPLETION SCREEN -->
+        <div class="completion-screen" id="completion-screen">
+            <div class="trophy">🏆</div>
+            <h2>Deck Complete!</h2>
+            <p class="result-text" id="result-text"></p>
+            <div class="controls-bar">
+                <button class="ctrl-btn accent" onclick="resetDeck()">↻ Study Again</button>
+                <button class="ctrl-btn" onclick="reviewUnknown()">📝 Review Unknown</button>
+                <a href="index.html" class="ctrl-btn" style="text-decoration:none">← Return to Dashboard</a>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            Geography Revision — Flashcard App 📖
+        </footer>
+    </div>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top-btn" id="scroll-top">↑</button>
+
+    <script src="data.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // === STATE ===
+        const params = new URLSearchParams(window.location.search);
+        const topicId = parseInt(params.get('id')) || 0;
+        const topic = FLASHCARD_DATA[topicId];
+
+        let deck = [...topic.cards];
+        let currentIndex = 0;
+        let known = new Set();
+        let unknown = new Set();
+        let mode = 'card'; // 'card' or 'list'
+
+        // === INIT ===
+        document.title = `${topic.name} — Flashcards`;
+        document.getElementById('topic-emoji').textContent = topic.emoji;
+        document.getElementById('topic-name').textContent = topic.name;
+        document.getElementById('topic-count').textContent = `${topic.cards.length} flashcards`;
+        document.getElementById('total-num').textContent = deck.length;
+        document.getElementById('score-remaining').textContent = deck.length;
+
+        // Initialize tracker
+        initTracker().then(() => {
+            console.log("Tracker ready for user:", tracker.userId);
+        });
+
+        renderCard();
+        buildList();
+
+        // === FLASHCARD ===
+        function renderCard() {
+            if (deck.length === 0) return;
+            const card = deck[currentIndex];
+            document.getElementById('card-term').textContent = card.term;
+            document.getElementById('card-definition').textContent = card.definition;
+            document.getElementById('current-num').textContent = currentIndex + 1;
+            document.getElementById('total-num').textContent = deck.length;
+
+            // Unflip
+            document.getElementById('flashcard').classList.remove('flipped');
+
+            // Nav button states
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+            document.getElementById('btn-next').disabled = currentIndex >= deck.length - 1;
+        }
+
+        function flipCard() {
+            document.getElementById('flashcard').classList.toggle('flipped');
+        }
+
+        function nextCard() {
+            if (currentIndex < deck.length - 1) {
+                currentIndex++;
+                renderCard();
+            }
+        }
+
+        function prevCard() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderCard();
+            }
+        }
+
+        function markCard(isKnown) {
+            const card = deck[currentIndex];
+            const key = card.term;
+
+            // TRACKING: Log individual review
+            tracker.logCardReview(topicId, card.term, isKnown);
+
+            if (isKnown) {
+                known.add(key);
+                unknown.delete(key);
+            } else {
+                unknown.add(key);
+                known.delete(key);
+            }
+            updateProgress();
+
+            // Auto-advance
+            if (currentIndex < deck.length - 1) {
+                currentIndex++;
+                renderCard();
+            } else {
+                checkCompletion();
+            }
+        }
+
+        function updateProgress() {
+            const total = deck.length;
+            const reviewed = known.size + unknown.size;
+            const pct = Math.round((reviewed / total) * 100);
+
+            document.getElementById('score-known').textContent = known.size;
+            document.getElementById('score-unknown').textContent = unknown.size;
+            document.getElementById('score-remaining').textContent = total - reviewed;
+            document.getElementById('progress-fill').style.width = pct + '%';
+            document.getElementById('progress-text').textContent = pct + '% complete';
+
+            // Update list styles
+            document.querySelectorAll('.list-item').forEach(item => {
+                const term = item.dataset.term;
+                item.classList.toggle('known', known.has(term));
+            });
+        }
+
+        function checkCompletion() {
+            const reviewed = known.size + unknown.size;
+            if (reviewed >= deck.length) {
+                // TRACKING: Log session completion
+                tracker.logSession(topicId, topic.name, known.size, unknown.size, deck.length);
+
+                document.getElementById('flashcard-mode').classList.add('hidden');
+                document.getElementById('list-mode').classList.remove('active');
+                const screen = document.getElementById('completion-screen');
+                screen.classList.add('active');
+                const pct = Math.round((known.size / deck.length) * 100);
+                document.getElementById('result-text').innerHTML =
+                    `You knew <strong>${known.size}</strong> out of <strong>${deck.length}</strong> terms (${pct}%).<br>` +
+                    (unknown.size > 0 ? `<strong>${unknown.size}</strong> terms need more practice.` : `Perfect score! 🎉`);
+            }
+        }
+
+        // === DECK CONTROLS ===
+        function shuffleDeck() {
+            for (let i = deck.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [deck[i], deck[j]] = [deck[j], deck[i]];
+            }
+            currentIndex = 0;
+            renderCard();
+            buildList();
+        }
+
+        function resetDeck() {
+            deck = [...topic.cards];
+            currentIndex = 0;
+            known.clear();
+            unknown.clear();
+            updateProgress();
+            renderCard();
+            buildList();
+            document.getElementById('flashcard-mode').classList.remove('hidden');
+            document.getElementById('completion-screen').classList.remove('active');
+            if (mode === 'list') {
+                document.getElementById('list-mode').classList.add('active');
+            }
+        }
+
+        function reviewUnknown() {
+            if (unknown.size === 0) return;
+            deck = topic.cards.filter(c => unknown.has(c.term));
+            currentIndex = 0;
+            known.clear();
+            unknown.clear();
+            updateProgress();
+            renderCard();
+            buildList();
+            setMode('card');
+            document.getElementById('flashcard-mode').classList.remove('hidden');
+            document.getElementById('completion-screen').classList.remove('active');
+            document.getElementById('total-num').textContent = deck.length;
+            document.getElementById('score-remaining').textContent = deck.length;
+        }
+
+        // === MODE TOGGLE ===
+        function setMode(m) {
+            mode = m;
+            document.getElementById('btn-card-mode').classList.toggle('active', m === 'card');
+            document.getElementById('btn-list-mode').classList.toggle('active', m === 'list');
+            document.getElementById('flashcard-mode').classList.toggle('hidden', m !== 'card');
+            document.getElementById('list-mode').classList.toggle('active', m === 'list');
+        }
+
+        // === LIST MODE ===
+        function buildList() {
+            const container = document.getElementById('list-mode');
+            container.innerHTML = '';
+            deck.forEach(card => {
+                const item = document.createElement('div');
+                item.className = 'list-item';
+                item.dataset.term = card.term;
+                if (known.has(card.term)) item.classList.add('known');
+                item.innerHTML = `
+                    <div class="list-term">${card.term}</div>
+                    <div class="list-definition">${card.definition}</div>
+                `;
+                item.addEventListener('click', () => item.classList.toggle('revealed'));
+                container.appendChild(item);
+            });
+        }
+
+        // === SEARCH ===
+        document.getElementById('card-search').addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            if (mode === 'list') {
+                document.querySelectorAll('.list-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(q) ? '' : 'none';
+                });
+            } else {
+                // In card mode, filter deck and reset
+                if (q === '') {
+                    deck = [...topic.cards];
+                } else {
+                    deck = topic.cards.filter(c =>
+                        c.term.toLowerCase().includes(q) || c.definition.toLowerCase().includes(q)
+                    );
+                }
+                currentIndex = 0;
+                if (deck.length > 0) renderCard();
+                document.getElementById('total-num').textContent = deck.length;
+            }
+        });
+
+        // === KEYBOARD SHORTCUTS ===
+        document.addEventListener('keydown', e => {
+            if (e.target.tagName === 'INPUT') return;
+            switch (e.key) {
+                case ' ':
+                case 'Enter': e.preventDefault(); flipCard(); break;
+                case 'ArrowRight': nextCard(); break;
+                case 'ArrowLeft': prevCard(); break;
+                case '1': markCard(false); break;
+                case '2': markCard(true); break;
+            }
+        });
+
+        // === SCROLL TO TOP ===
+        const scrollBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            scrollBtn.classList.toggle('visible', window.scrollY > 300);
+        });
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // === THEME TOGGLE ===
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+
+        // Init icon on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('theme') || 'dark';
+            updateThemeIcon(saved);
+        });
+    </script>
+</body>
+
+</html>
