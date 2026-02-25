@@ -36,6 +36,18 @@
 
         <!-- Controls -->
         <div class="controls-bar">
+            <!-- FSRS Toggle Topic -->
+            <label class="fsrs-toggle-label"
+                style="display:flex; align-items:center; gap:0.5rem; color:var(--text-main); font-size:0.875rem; font-weight:600; cursor:pointer; margin-right:auto;">
+                <input type="checkbox" id="fsrs-mode-toggle" onchange="toggleFSRS()">
+                <span class="fsrs-track"
+                    style="position:relative; width:36px; height:20px; background:var(--bg-layer-2); border-radius:99px; transition:0.3s; border:1px solid var(--border-color);">
+                    <span class="fsrs-thumb"
+                        style="position:absolute; top:2px; left:2px; width:14px; height:14px; background:var(--text-muted); border-radius:50%; transition:0.3s;"></span>
+                </span>
+                FSRS Mode
+            </label>
+
             <button class="ctrl-btn active" id="btn-card-mode" onclick="setMode('card')">🃏 Cards</button>
             <button class="ctrl-btn" id="btn-list-mode" onclick="setMode('list')">📋 List</button>
             <button class="ctrl-btn" id="btn-shuffle" onclick="shuffleDeck()">🔀 Shuffle</button>
@@ -50,8 +62,19 @@
 
         <!-- Score -->
         <div class="score-display">
-            <span class="score-chip score-known">✓ Know: <strong id="score-known">0</strong></span>
-            <span class="score-chip score-unknown">✗ Don't Know: <strong id="score-unknown">0</strong></span>
+            <span class="score-chip score-known" id="chip-known">✓ Know: <strong id="score-known">0</strong></span>
+            <span class="score-chip score-unknown" id="chip-unknown">✗ Don't Know: <strong
+                    id="score-unknown">0</strong></span>
+
+            <span class="score-chip score-fsrs-again" id="chip-fsrs-again" style="display:none">Again: <strong
+                    id="score-fsrs-again">0</strong></span>
+            <span class="score-chip score-fsrs-hard" id="chip-fsrs-hard" style="display:none">Hard: <strong
+                    id="score-fsrs-hard">0</strong></span>
+            <span class="score-chip score-fsrs-good" id="chip-fsrs-good" style="display:none">Good: <strong
+                    id="score-fsrs-good">0</strong></span>
+            <span class="score-chip score-fsrs-easy" id="chip-fsrs-easy" style="display:none">Easy: <strong
+                    id="score-fsrs-easy">0</strong></span>
+
             <span class="score-chip score-remaining">Remaining: <strong id="score-remaining">0</strong></span>
         </div>
 
@@ -84,6 +107,27 @@
             <div class="judge-row" id="judge-row">
                 <button class="judge-btn judge-dunno" onclick="markCard(false)">✗ Don't Know</button>
                 <button class="judge-btn judge-know" onclick="markCard(true)">✓ Know It</button>
+            </div>
+
+            <!-- FSRS Ratings -->
+            <div class="fsrs-judge-row" id="fsrs-judge-row"
+                style="display:none; gap:0.5rem; justify-content:center; flex-wrap:wrap;">
+                <button class="fsrs-btn fsrs-again" onclick="markFsrsCard(1)">
+                    <span class="fsrs-label">Again</span>
+                    <span class="fsrs-time" id="fsrs-time-1">&lt;1m</span>
+                </button>
+                <button class="fsrs-btn fsrs-hard" onclick="markFsrsCard(2)">
+                    <span class="fsrs-label">Hard</span>
+                    <span class="fsrs-time" id="fsrs-time-2">&lt;6m</span>
+                </button>
+                <button class="fsrs-btn fsrs-good" onclick="markFsrsCard(3)">
+                    <span class="fsrs-label">Good</span>
+                    <span class="fsrs-time" id="fsrs-time-3">&lt;10m</span>
+                </button>
+                <button class="fsrs-btn fsrs-easy" onclick="markFsrsCard(4)">
+                    <span class="fsrs-label">Easy</span>
+                    <span class="fsrs-time" id="fsrs-time-4">16d</span>
+                </button>
             </div>
 
             <!-- Nav arrows -->
@@ -119,6 +163,7 @@
     <button class="scroll-top-btn" id="scroll-top">↑</button>
 
     <script src="data.js"></script>
+    <script src="fsrs.js"></script>
     <script src="auth.js"></script>
     <script>
         // === STATE ===
@@ -126,10 +171,13 @@
         const topicId = parseInt(params.get('id')) || 0;
         const topic = FLASHCARD_DATA[topicId];
 
-        let deck = [...topic.cards];
+        let isFSRS = localStorage.getItem('fsrs_mode') === 'true';
+        let fullDeck = [...topic.cards];
+        let deck = [...fullDeck];
         let currentIndex = 0;
         let known = new Set();
         let unknown = new Set();
+        let fsrsRatings = { 1: new Set(), 2: new Set(), 3: new Set(), 4: new Set() };
         let mode = 'card'; // 'card' or 'list'
 
         // === INIT ===
@@ -137,16 +185,75 @@
         document.getElementById('topic-emoji').textContent = topic.emoji;
         document.getElementById('topic-name').textContent = topic.name;
         document.getElementById('topic-count').textContent = `${topic.cards.length} flashcards`;
-        document.getElementById('total-num').textContent = deck.length;
-        document.getElementById('score-remaining').textContent = deck.length;
+
+        document.getElementById('fsrs-mode-toggle').checked = isFSRS;
+        updateFsrsToggleStyle(isFSRS);
 
         // Initialize tracker
         initTracker().then(() => {
             console.log("Tracker ready for user:", tracker.userId);
+            if (isFSRS) {
+                deck = tracker.getDueCards(topicId, fullDeck);
+            }
+            document.getElementById('total-num').textContent = deck.length;
+            document.getElementById('score-remaining').textContent = deck.length;
+
+            toggleJudgeRow();
+            updateProgress();
+            renderCard();
+            buildList();
         });
 
-        renderCard();
-        buildList();
+        // === FSRS GLOBAL TOGGLE ===
+        function toggleFSRS() {
+            const cb = document.getElementById('fsrs-mode-toggle');
+            isFSRS = cb.checked;
+            localStorage.setItem('fsrs_mode', isFSRS);
+            updateFsrsToggleStyle(isFSRS);
+
+            // Reload deck depending on mode
+            if (isFSRS) {
+                deck = tracker.getDueCards(topicId, fullDeck);
+            } else {
+                deck = [...fullDeck];
+            }
+            currentIndex = 0;
+            known.clear();
+            unknown.clear();
+            [1, 2, 3, 4].forEach(r => fsrsRatings[r].clear());
+
+            document.getElementById('total-num').textContent = deck.length;
+            document.getElementById('score-remaining').textContent = deck.length;
+
+            toggleJudgeRow();
+            updateProgress();
+            renderCard();
+            buildList();
+
+            document.getElementById('flashcard-mode').classList.remove('hidden');
+            document.getElementById('completion-screen').classList.remove('active');
+        }
+
+        function updateFsrsToggleStyle(isChecked) {
+            const track = document.querySelector('.fsrs-track');
+            const thumb = document.querySelector('.fsrs-thumb');
+            if (isChecked) {
+                track.style.background = '#8B5CF6';
+                track.style.borderColor = '#6b7280'; // gray
+                thumb.style.background = '#ffffff';
+                thumb.style.transform = 'translateX(16px)';
+            } else {
+                track.style.background = 'var(--bg-layer-2)';
+                track.style.borderColor = '#6b7280'; // gray
+                thumb.style.background = 'var(--text-muted)';
+                thumb.style.transform = 'translateX(0)';
+            }
+        }
+
+        function toggleJudgeRow() {
+            document.getElementById('judge-row').style.display = isFSRS ? 'none' : 'flex';
+            document.getElementById('fsrs-judge-row').style.display = isFSRS ? 'flex' : 'none';
+        }
 
         // === FLASHCARD ===
         function renderCard() {
@@ -163,6 +270,18 @@
             // Nav button states
             document.getElementById('btn-prev').disabled = currentIndex === 0;
             document.getElementById('btn-next').disabled = currentIndex >= deck.length - 1;
+
+            if (isFSRS && deck.length > 0) {
+                updateFsrsPreviews(card.term);
+            }
+        }
+
+        function updateFsrsPreviews(term) {
+            const cardState = (tracker.data.fsrs[topicId] || {})[term] || null;
+            const previews = fsrs.getPreviews(cardState);
+            previews.forEach(p => {
+                document.getElementById(`fsrs-time-${p.rating}`).textContent = p.timeStr;
+            });
         }
 
         function flipCard() {
@@ -208,13 +327,61 @@
             }
         }
 
+        function markFsrsCard(rating) {
+            const card = deck[currentIndex];
+            const key = card.term;
+
+            tracker.logFsrsReview(topicId, card.term, rating);
+
+            [1, 2, 3, 4].forEach(r => fsrsRatings[r].delete(key));
+            fsrsRatings[rating].add(key);
+
+            if (rating > 1) {
+                known.add(key);
+                unknown.delete(key);
+            } else {
+                unknown.add(key);
+                known.delete(key);
+            }
+            updateProgress();
+
+            if (currentIndex < deck.length - 1) {
+                currentIndex++;
+                renderCard();
+            } else {
+                checkCompletion();
+            }
+        }
+
         function updateProgress() {
             const total = deck.length;
             const reviewed = known.size + unknown.size;
-            const pct = Math.round((reviewed / total) * 100);
+            const pct = Math.round((reviewed / total) * 100) || 0;
 
-            document.getElementById('score-known').textContent = known.size;
-            document.getElementById('score-unknown').textContent = unknown.size;
+            if (isFSRS) {
+                document.getElementById('chip-known').style.display = 'none';
+                document.getElementById('chip-unknown').style.display = 'none';
+                document.getElementById('chip-fsrs-again').style.display = '';
+                document.getElementById('chip-fsrs-hard').style.display = '';
+                document.getElementById('chip-fsrs-good').style.display = '';
+                document.getElementById('chip-fsrs-easy').style.display = '';
+
+                document.getElementById('score-fsrs-again').textContent = fsrsRatings[1].size;
+                document.getElementById('score-fsrs-hard').textContent = fsrsRatings[2].size;
+                document.getElementById('score-fsrs-good').textContent = fsrsRatings[3].size;
+                document.getElementById('score-fsrs-easy').textContent = fsrsRatings[4].size;
+            } else {
+                document.getElementById('chip-known').style.display = '';
+                document.getElementById('chip-unknown').style.display = '';
+                document.getElementById('chip-fsrs-again').style.display = 'none';
+                document.getElementById('chip-fsrs-hard').style.display = 'none';
+                document.getElementById('chip-fsrs-good').style.display = 'none';
+                document.getElementById('chip-fsrs-easy').style.display = 'none';
+
+                document.getElementById('score-known').textContent = known.size;
+                document.getElementById('score-unknown').textContent = unknown.size;
+            }
+
             document.getElementById('score-remaining').textContent = total - reviewed;
             document.getElementById('progress-fill').style.width = pct + '%';
             document.getElementById('progress-text').textContent = pct + '% complete';
@@ -230,7 +397,16 @@
             const reviewed = known.size + unknown.size;
             if (reviewed >= deck.length) {
                 // TRACKING: Log session completion
-                tracker.logSession(topicId, topic.name, known.size, unknown.size, deck.length);
+                if (isFSRS) {
+                    tracker.logSession(topicId, topic.name, known.size, unknown.size, deck.length, {
+                        again: fsrsRatings[1].size,
+                        hard: fsrsRatings[2].size,
+                        good: fsrsRatings[3].size,
+                        easy: fsrsRatings[4].size
+                    });
+                } else {
+                    tracker.logSession(topicId, topic.name, known.size, unknown.size, deck.length);
+                }
 
                 document.getElementById('flashcard-mode').classList.add('hidden');
                 document.getElementById('list-mode').classList.remove('active');
@@ -255,10 +431,15 @@
         }
 
         function resetDeck() {
-            deck = [...topic.cards];
+            if (isFSRS) {
+                deck = tracker.getDueCards(topicId, fullDeck);
+            } else {
+                deck = [...fullDeck];
+            }
             currentIndex = 0;
             known.clear();
             unknown.clear();
+            [1, 2, 3, 4].forEach(r => fsrsRatings[r].clear());
             updateProgress();
             renderCard();
             buildList();
@@ -267,14 +448,20 @@
             if (mode === 'list') {
                 document.getElementById('list-mode').classList.add('active');
             }
+            document.getElementById('score-remaining').textContent = deck.length;
         }
 
         function reviewUnknown() {
             if (unknown.size === 0) return;
-            deck = topic.cards.filter(c => unknown.has(c.term));
+            if (isFSRS) {
+                deck = deck.filter(c => unknown.has(c.term));
+            } else {
+                deck = fullDeck.filter(c => unknown.has(c.term));
+            }
             currentIndex = 0;
             known.clear();
             unknown.clear();
+            [1, 2, 3, 4].forEach(r => fsrsRatings[r].clear());
             updateProgress();
             renderCard();
             buildList();
@@ -322,10 +509,11 @@
                 });
             } else {
                 // In card mode, filter deck and reset
+                let currentPool = isFSRS ? tracker.getDueCards(topicId, fullDeck) : fullDeck;
                 if (q === '') {
-                    deck = [...topic.cards];
+                    deck = [...currentPool];
                 } else {
-                    deck = topic.cards.filter(c =>
+                    deck = currentPool.filter(c =>
                         c.term.toLowerCase().includes(q) || c.definition.toLowerCase().includes(q)
                     );
                 }

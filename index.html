@@ -25,6 +25,17 @@
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
             <span id="theme-icon">🌙</span>
         </button>
+        <!-- FSRS Toggle Global -->
+        <label class="fsrs-toggle-label"
+            style="display:flex; align-items:center; gap:0.5rem; color:var(--text-main); font-size:0.875rem; font-weight:600; cursor:pointer; margin-left:1rem;">
+            <input type="checkbox" id="fsrs-mode-toggle" onchange="toggleFSRS()">
+            <span class="fsrs-track"
+                style="position:relative; width:36px; height:20px; background:var(--bg-layer-2); border-radius:99px; transition:0.3s; border:1px solid var(--border-color);">
+                <span class="fsrs-thumb"
+                    style="position:absolute; top:2px; left:2px; width:14px; height:14px; background:var(--text-muted); border-radius:50%; transition:0.3s;"></span>
+            </span>
+            FSRS Algorithms
+        </label>
         <div id="auth-logged-in" style="display:none; display:flex; gap:1rem; align-items:center;">
             <span class="user-email" id="user-email"></span>
             <button class="auth-btn danger" onclick="handleLogout()">Log Out</button>
@@ -106,6 +117,16 @@
                     <canvas id="topicChart"></canvas>
                 </div>
                 <div class="chart-box">
+                    <h3>🧠 FSRS Rating Distribution</h3>
+                    <div
+                        style="position: relative; height: 100%; width: 100%; display: flex; justify-content: center; align-items: center; min-height: 250px;">
+                        <canvas id="fsrsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-row">
+                <div class="chart-box full">
                     <h3>📈 Daily Activity (Last 30 Days)</h3>
                     <canvas id="dailyChart"></canvas>
                 </div>
@@ -160,6 +181,12 @@
             <!-- END NEW BUTTON -->
 
             <div class="auth-error" id="auth-error"></div>
+            <div class="auth-resend" id="auth-resend" style="display:none; text-align:center; margin:0.5rem 0;">
+                <span style="color:var(--text-muted); font-size:0.875rem;">Didn't get the confirmation email?</span>
+                <a id="resend-link" onclick="handleResendEmail()"
+                    style="color:#818cf8; cursor:pointer; font-size:0.875rem; font-weight:600; margin-left:0.25rem; text-decoration:underline;">Resend
+                    it</a>
+            </div>
             <div class="auth-success" id="auth-success"></div>
 
             <form id="auth-form" onsubmit="handleAuthSubmit(event)">
@@ -182,6 +209,7 @@
     </div>
 
     <script src="data.js"></script>
+    <script src="fsrs.js"></script>
     <script src="auth.js"></script>
     <script>
         // === AUTH UI LOGIC ===
@@ -193,6 +221,7 @@
             document.getElementById('auth-modal-overlay').classList.add('active');
             document.getElementById('auth-error').style.display = 'none';
             document.getElementById('auth-success').style.display = 'none';
+            document.getElementById('auth-resend').style.display = 'none';
         }
 
         function closeAuthModal() {
@@ -239,10 +268,12 @@
             const password = document.getElementById('auth-password').value;
             const errorBox = document.getElementById('auth-error');
             const successBox = document.getElementById('auth-success');
+            const resendBox = document.getElementById('auth-resend');
             const btn = document.getElementById('auth-submit-btn');
 
             errorBox.style.display = 'none';
             successBox.style.display = 'none';
+            resendBox.style.display = 'none';
             btn.disabled = true;
             btn.textContent = 'Please wait...';
 
@@ -260,8 +291,42 @@
                 errorBox.textContent = err.message;
                 errorBox.style.display = 'block';
                 btn.textContent = authMode === 'login' ? 'Log In' : 'Sign Up';
+
+                // Show resend link if login failed because email is not confirmed
+                if (err.message && err.message.toLowerCase().includes('email not confirmed')) {
+                    resendBox.style.display = 'block';
+                }
             } finally {
                 btn.disabled = false;
+            }
+        }
+
+        async function handleResendEmail() {
+            const email = document.getElementById('auth-email').value;
+            const errorBox = document.getElementById('auth-error');
+            const successBox = document.getElementById('auth-success');
+            const resendLink = document.getElementById('resend-link');
+
+            if (!email) {
+                errorBox.textContent = 'Please enter your email address first.';
+                errorBox.style.display = 'block';
+                return;
+            }
+
+            resendLink.textContent = 'Sending...';
+            resendLink.style.pointerEvents = 'none';
+
+            try {
+                await resendConfirmationEmail(email);
+                errorBox.style.display = 'none';
+                successBox.textContent = 'Confirmation email resent! Please check your inbox.';
+                successBox.style.display = 'block';
+            } catch (err) {
+                errorBox.textContent = 'Failed to resend: ' + err.message;
+                errorBox.style.display = 'block';
+            } finally {
+                resendLink.textContent = 'Resend it';
+                resendLink.style.pointerEvents = 'auto';
             }
         }
 
@@ -298,7 +363,35 @@
             await initTracker();
             buildTopicGrid();
             renderDashboard();
+
+            // Set FSRS toggle state
+            const isFSRS = localStorage.getItem('fsrs_mode') === 'true';
+            document.getElementById('fsrs-mode-toggle').checked = isFSRS;
+            updateFsrsToggleStyle(isFSRS);
         })();
+
+        // === FSRS GLOBAL TOGGLE ===
+        function toggleFSRS() {
+            const cb = document.getElementById('fsrs-mode-toggle');
+            localStorage.setItem('fsrs_mode', cb.checked);
+            updateFsrsToggleStyle(cb.checked);
+        }
+
+        function updateFsrsToggleStyle(isChecked) {
+            const track = document.querySelector('.fsrs-track');
+            const thumb = document.querySelector('.fsrs-thumb');
+            if (isChecked) {
+                track.style.background = '#8B5CF6';
+                track.style.borderColor = '#6b7280'; // gray
+                thumb.style.background = '#ffffff';
+                thumb.style.transform = 'translateX(16px)';
+            } else {
+                track.style.background = 'var(--bg-layer-2)';
+                track.style.borderColor = '#6b7280'; // gray
+                thumb.style.background = 'var(--text-muted)';
+                thumb.style.transform = 'translateX(0)';
+            }
+        }
 
         // === TOPIC GRID ===
         function buildTopicGrid() {
@@ -334,6 +427,7 @@
         // === DASHBOARD RENDERER ===
         let topicChartInstance = null;
         let dailyChartInstance = null;
+        let fsrsChartInstance = null;
 
         function renderDashboard() {
             const t = tracker;
@@ -356,7 +450,11 @@
             const daily = t.getActivityByDay(30);
             renderDailyChart(daily);
 
-            // 5. Top Terms
+            // 5. FSRS Distribution Chart
+            const fsrsData = t.getFsrsDistribution();
+            renderFsrsChart(fsrsData);
+
+            // 6. Top Terms
             const topTerms = t.getMostReviewedTerms(5);
             const termsList = document.getElementById('top-terms-list');
             if (topTerms.length > 0) {
@@ -479,6 +577,49 @@
                         y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
                         x: { grid: { display: false }, ticks: { maxTicksLimit: 6, color: '#9ca3af' } }
                     }
+                }
+            });
+        }
+
+        function renderFsrsChart(data) {
+            const ctx = document.getElementById('fsrsChart').getContext('2d');
+            if (fsrsChartInstance) fsrsChartInstance.destroy();
+
+            const sum = data.reduce((a, b) => a + b, 0);
+
+            fsrsChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: sum === 0 ? ['No Data'] : ['Again', 'Hard', 'Good', 'Easy'],
+                    datasets: [{
+                        data: sum === 0 ? [1] : data,
+                        backgroundColor: sum === 0 ? ['rgba(255,255,255,0.05)'] : [
+                            'rgba(239, 68, 68, 0.8)',   // Again
+                            'rgba(245, 158, 11, 0.8)',  // Hard
+                            'rgba(16, 185, 129, 0.8)',  // Good
+                            'rgba(59, 130, 246, 0.8)'   // Easy
+                        ],
+                        borderColor: sum === 0 ? ['transparent'] : [
+                            '#ef4444', '#f59e0b', '#10b981', '#3b82f6'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#9ca3af' } },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    if (sum === 0) return 'No data yet';
+                                    return ' ' + context.label + ': ' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%'
                 }
             });
         }

@@ -1,0 +1,608 @@
+Coastal Landscapes
+==================
+
+Aggradation – the disposition of sediment in a river channel which results in a rise in the bed elevation.
+Alluvial fan – a cone of sediment deposited by a river where it leaves a steep upland course and enters a lowland area.
+Appropriate technology – technology which is ‘appropriate’ in its context of use. It is small scale, can be managed locally and often uses skills available in the local community.
+Attrition – the erosion of sediment transported by rivers, glaciers, waves and wind.
+Backwash – flow of water down a beach after a wave has broken.
+Barrage – a dam built across an estuary or bay so that the rise and/or fall in the tides can be used to generate energy by the turning of turbines.
+Beach recharge – the addition of sediment to a beach by humans to increase its size and volume.
+Bio-prospecting – the discovery and commercial exploitation of biological resources, e.g. genetic material in organisms.
+Biodegrade – the breakdown of a substance through biochemical reactions or the actions of organisms such as bacteria into different compounds.
+Biological weathering – the breakdown of rocks through the chemical and physical action of living organisms, e.g. burrowing, tree roots etc.
+Chelation – a type of chemical weathering caused by acids derived from rainwater and dead organic material.
+Chemical weathering – the in situ breakdown of rocks by chemical processes such as oxidation, solution and hydrolysis.
+Coastal squeeze – the erosion of mudflats, sand flats and beaches, trapped between rising sea level and hard coastal defence structures (e.g. sea walls).
+Commodity – a good or material (not a service) interchangeable through trade or commerce such as a raw material.
+Concordant – a coastline with bands of different geologies lying parallel to the shore.
+Containerisation – the shipping of goods (by road, rail and sea) in standard-sized metal boxes. It allows efficient, mechanised handling of large volumes of goods and lowers transport costs.
+Continental shelf – the gently sloping offshore extension of a continent extending into the ocean as far as the continental slope.
+Corrasion – the scouring and erosion of rock surfaces by sediments transported by rivers, glaciers, waves and wind (also known as abrasion).
+Crevasse splays – low-lying areas of deposited sediment between levées.
+Cusps – a pointed and regular arc pattern of sediment on a beach.
+De-industrialisation – the absolute or relative decline in the importance of manufacturing in the economy of a country or region.
+Denudation – the wearing away of the Earth’s surface by weathering and erosion.
+Dependent variable – a variable affected by change in a related (independent) variable, e.g. rainfall affected by altitude.
+Deposition – the laying down of sediment transported by rivers, waves, glaciers and wind, as energy levels decline.
+Discordant – a coastline with bands of different geologies lying perpendicular to the shore.
+Endemic disease – a disease that exits permanently in a geographical area or human group.
+Enhanced weathering – artificial crushing of rocks to increase surface areas and absorption of atmospheric CO2 by silicates to form carbonate minerals.
+Entitlements – the purchasing and bargaining power that gives people access to food and other basic needs.
+Erosion – the wearing away and/or removal of rock and other material by a moving force.
+Eustatic – worldwide change in sea level.
+Fault scarp – a cliff or escarpment formed directly by rocks being displaced either side of a fault.
+Fetch – the distance of open water in one direction from a coastline, over which the wind can blow.
+Hard engineering – the controlled disruption of natural processes by using man-made structures, e.g. sea wall, levées.
+Histogram – a type of bar chart where the frequency of values is represented in classes or categories.
+Independent variable – a variable causing change in another (dependent) variable, e.g. rainfall influencing river flow.
+Input – an addition of energy and/or materials to a system.
+Insolation weathering – the in situ breakdown of rocks in tropical and subtropical deserts caused by extreme diurnal changes in surface temperature.
+Leaching – soluble materials draining away in soil.
+Liquefaction – the process by which sediments and soils lose their mechanical strength from a sudden loss of cohesion. The material is temporarily transformed into a fluid as the result of being violently shaken during an earthquake.
+Lithification – the transformation of sediments into rock.
+Longshore drift – the movement of sediment by waves and currents along a coastline.
+Mass movement – the downslope transportation of material under gravity.
+Methane hydrate – a structure of ice that contains methane between ice crystals and is found in ocean floor sediments.
+Nearshore zone – the area of coastal environment between mean high tide and mean low tide.
+Orthogonals – imaginary lines, perpendicular to wave fronts, representing the transfer of energy as a wave moves towards the coast.
+Output – the transfer of energy and/or materials out of a system.
+Palaeomagnetism – traces of changes in the Earth’s magnetic field in the alignment of magnetic minerals in sedimentary and igneous rocks.
+Primary data – information that is unprocessed and often collected by research.
+Primary producer – green plants (both terrestrial and marine) that convert sunlight, CO2 and mineral nutrients in photosynthesis, into organic matter (chemical energy).
+Rip currents – strong and relatively narrow currents of water that flow seaward against breaking waves.
+Rock groynes – low walls made of resistant pieces of rock and built out from the coast into the sea.
+Salt weathering – the breakdown of permeable rocks by the internal growth of salt crystals precipitated out of solution.
+Sand sea – a vast area of sand dunes, completely covering the solid rock surfaces at depth.
+Secondary sector – economic activities involving manufacturing industries, e.g. processing raw materials, making semi-finished and finished goods.
+Sediment budget – the balance of the sediment volume entering and exiting a particular section of coast.
+Sediment cell – a stretch of coastline and its associated nearshore area within which the movement of coarse sediment, sand and shingle is largely self-contained.
+Soft engineering – the deployment of natural, sustainable processes to protect the environment from erosion, flooding etc., rather than hard engineering structures, e.g. beaches and salt marshes rather than sea walls.
+Solution – the chemical weathering process by which rock minerals are dissolved.
+Statistical population – the entire pool from which a statistical sample is drawn (e.g. all the pebbles on a shingle beach).
+Storm wave – a wave generated locally by high wind energy.
+Strata – the layers or beds found in sedimentary rock.
+Sub-aerial process – a collective term for weathering and mass movement processes.
+Swash – the movement of water up a beach after a wave has broken.
+Swell wave – a relatively smooth ocean wave that travels some distance from the area of its generation.
+Talus – a steep, concave debris slope at the foot of a cliff or free-face, comprising angular rock particles (also known as a scree slope).
+Threshold (coastal) – the relatively shallow part of a ria or fjord at its seaward end.
+Troposphere – the lowest layer of the atmosphere, which contains virtually all of the planet’s weather.
+Turbid – cloudy or muddy conditions owing to sediments held in suspension.
+Wave period – the time interval between successive wave crests arriving at a given point.
+Wave refraction – the reorientation of wave fronts as they enter shallow water so that they approach parallel (or roughly parallel) to the shoreline.
+Weathering – the in situ breakdown of rocks exposed at, or near, the land surface by physical, chemical and biological processes.
+
+Glaciated Landscapes
+====================
+
+Ablation – the loss of ice and snow, especially from a glacier, through melting, evaporation and sublimation.
+Accumulation – the addition or gain of snow and ice to a glacier over time.
+Active layer – the near surface layer in a periglacial environment which seasonally freezes and thaws.
+Alases – flat-floored, steep-side depressions in periglacial environments.
+Arête – a narrow, ‘knife-edged’ ridge between two corries.
+Cirrus cloud – a high altitude, feather-like cloud made of ice crystals.
+Compressing flow – the movement of glacial ice down a gentle gradient, during which it thickens.
+Continental drift – the theory that the continents are mobile and have moved across the Earth’s surface through geological time.
+Cryoturbation – frost churning of layers of regolith in periglacial environments.
+Diagenesis – the process by which snow becomes ice due to compression.
+Drift – the collective term for all glacial deposits, including till and outwash.
+Drumlins – streamlined mounds of glacial drift.
+Ecosystem service – the processes by which the environment produces resources used by humans such as oxygen, water, food and materials.
+Esker – a long, sinuous ridge composed of stratified sand and gravel.
+Extending flow – the movement of glacial ice down a steep gradient, during which it thins.
+Freeze-thaw – a mechanical weathering process caused by water, confined in rock joints, expanding as it freezes, and as a result breaking rocks into smaller particles.
+Frost heave – the downslope displacement of soil particles that results from cycles of freeze-thaw.
+Gelifluction – the slow, downslope mass flow of saturated regolith resting on a layer of permafrost.
+Glacial – a prolonged cold climatic phase lasting for tens of thousands of years and causing continental glaciation in middle and high latitudes.
+Glacier mass balance – the difference between the amount of snow and ice accumulation and the amount of ablation occurring in a glacier over one year.
+Glacio-fluvial – relating to meltwater from a glacier.
+Hydrostatic pressure – the pressure exerted by a confined fluid, such as water under or in a glacier.
+Ice shelf – a floating sheet of ice permanently attached to a land mass.
+Ice wedge cast – a downward tapering body of sediment differentiated from surrounding regolith by texture and/or colour. Casts are evidence of former ice wedges which developed during past periglacial conditions.
+Ice-contact drift – sediment deposited under or against ice.
+Inter-glacial – a period of climatic warming (lasting c.10,000 years) between glacials.
+Jökulhaulps – extreme glacial meltwater outbursts caused by geothermal or volcanic activity beneath glaciers.
+Lateral moraine – a ridge of till running along the edge of a glacial valley.
+Merchandise – commodities or products (not services) available for sale.
+Multiplier effect – the process by which a new or expanding economic activity in an area creates additional employment as its employees have money to spend on goods and services. As the wealth of an area increases it stimulates more economic activity.
+Nivation hollow – a depression formed by freeze-thaw and meltwater transport of weathered rock particles beneath a permanent snow patch.
+Ognip – the remains of a collapsed pingo, forming a depression surrounded by circular earth ramparts.
+Outwash plain – a flat expanse of glacio-fluvial sediment located beyond an existing or former glacier or ice sheet front.
+Outwash – material deposited by glacial meltwater.
+Permafrost – permanently frozen soil and regolith.
+Pingo – a conical ice-cored hill in periglacial environments.
+Precipitation – moisture (rain, snow, hail) falling from clouds towards the ground.
+Pressure melting point – the temperature at which ice melts when under pressure.
+Price shocks – an unexpected and unpredictable change in prices. It can be positive or negative.
+Proglacial lakes – a body of water impounded in front of a glacier.
+Pyramidal peak – an angular, sharply pointed mountain peak which results from corrie erosion.
+Recessional moraines – a series of ridges running transversely across a glacial trough.
+Rock flour – fine material derived from abrasion by a glacier.
+Rock glacier – coarse rock particles forming linear accumulations and moving slowly downslope due to the formation and melting of interstitial ice.
+Services – tradeable activities providing expertise which relies on workforce skills, experience and knowledge rather than processing or production of physical materials. Producer services include legal and financial services for other firms. Consumer services include education and health care for local communities.
+Solifluction – the slow flow of fine, water-saturated regolith from higher to lower ground.
+Stadial – a sudden and brief period of glacial conditions lasting several hundred years.
+Stone garlands – elongated accumulations of stones on a slope.
+Striations – scratches or grooves on rock surfaces formed by glacial abrasion.
+Sublimation – the phase change of water from ice to vapour.
+Terminal moraine – a ridge of till extending across a glacial trough.
+Threshold – the minimum number of people or spending required to support a good or service.
+Till – unsorted material deposited directly by glacial ice.
+Zero tillage – a type of arable cultivation designed to minimise moisture loss from the soil. Its main feature is the absence of ploughing.
+
+Dryland Landscapes
+==================
+
+Aeolian – erosional, transportational and depositional processes by the wind.
+Bajada – a series of alluvial fans that merge to form a continuous apron of sediment along a mountain front in dryland regions.
+Barchan – a discrete, crescent-shaped sand dune, with horns pointing downwind.
+Biodiversity hotspot – a region that is rich in biodiversity and where species and habitats are threatened with destruction.
+Butte – an isolated, steep-sided, flat-topped rock outcrop.
+Core region – an area where economic activity is concentrated and living standards are relatively high.
+Deflation – erosion of clay and silt-sized particles by wind action in drylands.
+Desert pavement – an almost continuous surface of rocky particles in drylands, resulting from the removal of finer particles by wind action.
+Desertification – the reduction in agricultural capacity due to overexploitation of resources and natural processes such as drought. Only in extreme cases does it result in desert-like conditions.
+Emerging and developing countries – countries that do not share all the economic development characteristics required to be advanced, and also are not eligible for the Poverty Reduction and Growth Trust, identified by the IMF.
+Energy security – the uninterrupted availability of energy sources at an affordable price.
+Erg – a sand desert.
+Exfoliation – the peeling away of outer rock layers of boulders and rock outcrops by weathering in drylands.
+Flash flood – a sudden and violent flood event caused by intense rainfall and rapid run-off.
+Flocculation – a process by which salt causes the aggregation of minute clay particles into larger masses that are too heavy to remain suspended in water.
+Flocs – a mass formed in a fluid by the aggregation of suspended particles.
+Flood basalt – a large area of basaltic lava erupted over a long period (thousands of years) from multiple vents, e.g. the Deccan Plateau.
+Informal sector – those parts of the economy outside official recognition and record. People do not need formal qualifications to be employed in it, neither is there regulation of it.
+Inselberg – an isolated, steep-sided mountain, often surrounded by extensive plains.
+Inter-regional trade – the flow of international trade among major world regions such as Europe, North America and Asia.
+Inter-tropical convergence zone – area of permanent low pressure around the Equator which forms the rising limb of the Hadley cell. It is associated with instability, convection and thunderstorms.
+Intra-regional trade – the flow of international trade within one or other of the major world regions such as Europe or Asia.
+Kinetic energy – the capacity to do work as a result of motion.
+Lag deposit – extensive, coarse, rocky particles in deserts, too large to be transported by wind action.
+Linear dune – narrow, ridge-like dunes, often tens of kilometres in length and aligned in the direction of the prevailing wind.
+Loess – a wind-blown deposit of fine particles and dust that weathers to form fertile but easily eroded soils.
+Mesa – an extensive, steep-sided, flat-topped upland.
+Overgrazing – excessive grazing of land by livestock which destroys or degrades pasture and is not sustainable.
+Pediment – an extensive, gently sloping rock platform extending from the foot of a plateau-like feature in dryland environments.
+Playa – a basin-like area of inland drainage in a dryland region. After heavy rain it may contain a shallow, temporary lake.
+Potential energy – the capacity to do work that a body possesses by virtue of its position and that is potentially transformable into another form of energy.
+Protozoa – single-celled micro-organisms that get their energy from the surrounding environment.
+Reg – a stony, rocky desert.
+Regeneration – the investment of capital and ideas into an area to revitalise and renew its socio-economic and environmental status.
+Regolith – a loose layer of rocky material overlying bedrock.
+Saltpans – flat areas of ground covered with salt deposited by the evaporation of saline water.
+Star dune – a pyramid-shaped sand dune which develops where there is no dominant wind direction.
+Systematic sampling – a sample drawn at regular intervals from a population (e.g. every 10 m, every nth person).
+Thermal energy – the capacity to do work as a result of heat.
+Trade winds – prevailing winds that blow southeast and northeast towards the Equator from the sub-tropics.
+Transportation – The movement of material by the kinetic energy of a medium such as water, wind or ice.
+Trophic level – the level at which energy in the form of food is transferred from one organism to another as part of a food chain.
+Zeugen – tabular-shaped rock outcrops in hot deserts, attributed to wind erosion.
+
+Earth’s Life Support Systems
+============================
+
+Absolute humidity – the mass of water vapour in a given volume of air.
+Abstraction – the extraction of water from rivers and boreholes for public water supply, agriculture etc.
+Acidification – decreasing pH, e.g. of the oceans due to an increase in the uptake of CO2 from the atmosphere.
+Algal bloom – a rapid increase in algae in a water system.
+Aquifer – a water-bearing band of porous or permeable rock.
+Artesian aquifer – a confined aquifer containing groundwater that when tapped will rise to the surface under its own pressure.
+Artesian pressure – the hydrostatic pressure exerted on groundwater in a confined aquifer occupying a synclinal structure.
+Atmosphere – the thin envelope of gases (mainly nitrogen and oxygen) that surrounds the Earth.
+Biomass – weight of living matter per unit area (usually b/m2 ).
+Biosphere – the space at the Earth’s surface and within the atmosphere occupied by living organisms.
+Blue water navy – a navy capable of operating away from its home bases and across the deep oceans.
+Carbon capture and storage – the removal of CO2 from emissions by thermal power stations and its storage in disused oil and gas wells underground.
+Carbon fertilisation – rising CO2 levels in the atmosphere which increase photosynthesis and stimulate plant growth.
+Carbon offset – market-based approach to limiting carbon emissions. Businesses receive annual carbon quotas (credits). These can be sold/bought on international carbon markets.
+Carbon sink – a long-term store of carbon in ocean sediments, carbonate rocks, forests etc.
+Carbon source – inputs of carbon to the atmosphere by respiration, combustion and decomposition.
+Carbonaceous rock – rocks mainly comprising the fossilised remains of plants, e.g. coal, lignite.
+Carbonate rock – rocks comprising carbonate minerals (e.g. CaCO3 ) such as limestone and chalk.
+Catchment – the area drained by a river and its tributaries i.e. a drainage basin.
+Closed system – a system with inputs and outputs of energy, but without any movement of materials across system boundaries.
+Condensation – the phase change of water vapour (gas) to water (liquid).
+Decarbonation – the reduction or removal of carbon emissions from energy sources.
+Enhanced greenhouse effect – increasing levels of CO2 and other greenhouse gases in the atmosphere amplifying the natural greenhouse effect.
+Eutrophication – the process whereby nutrient enrichment in water (streams, rivers, lakes) leads to a fall in oxygen levels and the subsequent death of species which are O2 dependent.
+Evaporation – the process by which liquid water is converted into a gaseous state.
+Evapotranspiration – combined loss of water at the surface through evaporation and transpiration by plants.
+Flux – the rate of energy transfer per unit area.
+Groundwater flow – the horizontal movement of water within aquifers.
+Groundwater – water stored underground in permeable and porous rocks known as aquifers.
+Hydration – the breakdown of rocks by cycles of wetting (expansion) and drying (contraction).
+Hydrocarbons – the main chemical compounds making up fossil fuels.
+Hydrothermal vent – very hot water springs, rich in dissolved minerals, flowing from the ocean floor at mid-ocean ridges or hot spots.
+Infiltration capacity – the maximum rate at which water, under the pull of gravity, soaks into the soil.
+Infiltration – the vertical movement of rainwater through the soil.
+Interception loss – rainwater stored temporarily on the leaves, stems and branches of vegetation which is evaporated and does not reach the ground surface.
+Lag time – the difference in time between maximum rainfall and peak river discharge.
+Life cycle – the progress of a person through various stages based on age and family unit, from infancy to old age.
+Myrdal’s model of circular and cumulative causation – initial advantages to economic development in a core region, such as natural resources or accessibility, trigger a series of virtuous growth cycles through positive feedback, leading to further economic growth and the acquired advantages of agglomeration.
+Negative feedback – an automatic response to change in a system that restores equilibrium.
+Net primary productivity (NPP) – the rate at which plants accumulate energy in the form of organic matter taking into account the energy used in respiration.
+Open system – a type of system whose boundaries are open to both inputs and outputs of energy and matter.
+Overland flow – rainfall that runs off the ground surface either because the soil is saturated or the intensity of rainfall exceeds the soil’s infiltration capacity.
+Oxidation – a chemical process that weathers certain types of rock and involves the absorption of oxygen from either the atmosphere or water by rock minerals.
+Peak discharge – the maximum flow (in cumecs) of a river in response to a rainfall event.
+Percolation – the movement of surface and soil water into underlying permeable rocks.
+Permeability – the ability of a rock to absorb water through rock joints, pores etc.
+Permeable rock – a type of rock that is penetrated by water, either through mineral pores (air spaces) or along joints, faults and fissures.
+Photic zone – shallow layer of water in the ocean that light penetrates, on average to about 50 m.
+Photosynthesis – process by which green plants convert water and CO2 into starch and sugar in the presence of sunlight.
+Porosity – the ability of a rock, like chalk, to absorb water through tiny air spaces (or pores) between mineral particles.
+Porous rock – rocks which contain pores or air spaces between mineral particles, where water is stored.
+Positive feedback – an automatic response to change in a system which generates further change.
+Potential evapotranspiration – the amount of moisture that could in theory be evaporated and transpired from a surface, assuming that moisture is freely available all year round.
+Potentiometric surface – an imaginary surface that defines the theoretical level to which water would rise in a confined aquifer.
+Producer organisms – organisms that capture energy from the Sun in the process of photosynthesis and store this energy as organic matter.
+Recharge – net input of water into an aquifer causing a rise in the water table.
+Relative humidity – the mass of water vapour in a given volume of air as a ratio of the mass needed to saturate it.
+Residence time – the length of time that a molecule of water or carbon dioxide etc. remains in natural storage (e.g. in the atmosphere or oceans).
+Respiration – the process in living organisms where the intake of oxygen oxidises organic substances to produce energy and release carbon dioxide.
+River discharge – the volume of water flowing in a river channel, measured in cubic metres per second (cumecs).
+Run-off – the movement of water across the land surface.
+Saturated overland flow – the movement of water across the ground –
+Stemflow – the flow of water along the branches and stems of trees and other plants to the ground.
+Surface wash – rainwater that runs-off the ground surface but is not confined within a channel.
+Thermal expansion of water – increase in volume of water due to its rise in temperature.
+Thermocline – the depth in the ocean where there is a rapid change in water temperature.
+Throughflow – water flowing horizontally through the soil to stream and river channels.
+Tidal range – the vertical difference in height between consecutive high and low waters over a tidal cycle.
+Transpiration – the evaporation of moisture from pores on the leaf surfaces of plants.
+Virtual water – the volume of freshwater needed to make a product, measured at the place where the product was manufactured.
+Water balance – the relationship between precipitation, streamflow, evapotranspiration, and soil moisture and groundwater storage in a drainage basin over a year.
+Water cycle budget – the annual volume of movement of water by precipitation, evapotranspiration, run-off etc. between stores such as oceans, permeable rocks, ice sheets, vegetation, soil etc.
+Water table – the upper surface of the zone of saturation in permeable rocks and the soil.
+Xerophyte – a plant with adaptations that enable it to survive in an environment with little water.
+
+Changing Spaces, Making Places
+==============================
+
+Capitalist – the socio-economic system in which production of goods and services takes place to generate profit. A key driving force in the system is people’s desire for gain and self-interest.
+Carrying capacity – the maximum number of a species that can be supported in a given area in a sustainable way.
+Conurbation – large urban area in population and areal terms, made up of the merging together of previously separate towns and cities.
+Degradation (of land) – a process leading to a significant reduction in the production capacity of land.
+Deprivation – when a person’s well-being falls below a generally regarded minimum. A range of factors are usually included to measure this such as employment, housing, health and education.
+Disposable income – the proportion of a person’s income that is left after essentials such as housing, food, clothing, heating and taxes have been paid.
+Economic restructuring – the change in proportions of people working in various economic sectors, e.g. the change in ACs from secondary to tertiary employment.
+Ecosystem – a community of living organisms and their relationships with each other and the environment.
+Edge city – substantial urban development on the fringe of an existing conurbation. They are often formally planned and are relatively selfsufficient.
+Gentrification – process by which former low-income inner city housing districts in ACs are invaded by higher-income groups and refurbished.
+Ghetto – concentration of people with similar socio-economic, cultural or ethnic background within a well-defined small part of an urban area.
+Green belt – zone of predominantly rural land use on the periphery of an urban area where strict controls on development apply.
+Housing tenure – the system under which housing is occupied, e.g. owneroccupiers or tenants renting from a landlord.
+Icon – something that has meaning as being representative of a place, culture or religion. In the urban landscape a building can become an icon, e.g. Buckingham Palace.
+Key settlement – rural settlement where services (e.g. schools, doctors’ surgeries, shops) are concentrated to meet thresholds that will ensure their economic viability.
+Knowledge economy – wealth creating activities that gather, store and analyse knowledge, e.g. high-tech manufacturing, finance, telecommunications, business services, design, education and health.
+Militarisation – a significant increase in military activity in a place.
+Plant succession – the sequence of changes within a plant community as it develops through time.
+Player – individual or organisation with an interest and or influence in actions, decisions or operations. Also known as a stakeholder.
+Post-industrial – a society and economy no longer dominated by the secondary sector but one where the great majority of people are involved in tertiary activities.
+Qualitative data – information focused on how people view, experience, construct and represent places.
+Quaternary sector – economic activities that provide services to other economic activities, e.g. finance, research and development, advertising and consultancy.
+Rebranding – developments aimed at changing negative perceptions of a place, making it more attractive to investment.
+Reimaging – developments associated with rebranding and usually involving cultural, artistic or sporting elements.
+Settling velocity – the speed required for suspended particles of a given size, transported by rivers, the wind and tidal currents, to be deposited.
+Spatial inequality – the unequal distribution of factors such as income, education or health across geographic space at any scale.
+Stability – the atmospheric condition where an air parcel displaced from its original level returns to the same level (i.e. because it is heavier/denser than the surrounding air).
+Stakeholder – see player.
+Tertiary sector – economic activities providing services, e.g. education and health, legal, financial, insurance, government.
+Time-space compression – a set of processes leading to a ‘shrinking world’ caused by reductions in the relative distance between places, e.g. travel time.
+Urban heat island – a town or city that is significantly warmer than its surrounding rural areas due to human activities.
+
+Trade in the Contemporary World
+===============================
+
+Block disintegration – physical weathering of massively jointed rocks which results in boulder-sized rock debris.
+Blockfield – a large expanse of boulders strewn across a level surface, often in mountain environments.
+Comparative advantage – the principle that countries or regions benefit from specialising in an economic activity in which they are relatively more efficient or skilled.
+Comprehensive redevelopment – the planning and rebuilding of a substantial part of an urban area involving the demolition of nearly all of the previous buildings and infrastructure.
+Corporate social responsibility – commitment and initiative of a corporation to assess and take responsibility for its social and environmental impact. This includes its ethical behaviour towards the quality of life of its work force, their families and local communities, and its contribution to economic development and the natural environment.
+Development gap – difference in prosperity and well-being between rich and poor countries. This could be measured, for example, by GDP per capita and HDI.
+Economies of scale – internal economies of scale are savings in unit costs that arise from large-scale production, derived from within a plant; external economies of scale are savings made by a firm that arise from outside the firm itself, such as benefits of proximity to other firms or infrastructure.
+Escarpment – a tilt block forming an extensive upland area, with a short, steep (scarp) slope and a long, gentle (dip) slope.
+Food supply chain – the process whereby food moves from producer to consumer. It involves production, processing, distribution, storage, consumption and disposal.
+Foreign Direct Investment (FDI) – inward investment by a foreign company (usually a large TNC) in a country.
+Global Positioning System – a navigation system using satellites to provide location, velocity and time for the device possessing GPS.
+Global commons – the Earth’s shared natural resources, e.g. the oceans and the atmosphere.
+Global dimming – release of aerosols to the atmosphere by burning fossil fuels. The aerosols reflect insolation and lower global temperatures.
+Global governance – intervention by the global community, attempting to regulate issues, such as human rights, sovereignty and territorial integrity.
+Global shift – the locational movement of manufacturing production in particular from ACs to EDCs and LIDCs from the 1970s onwards.
+Global supply chains – flows of materials, products, information, services and finance in a network of suppliers, manufacturers, distributors and customers around the world.
+Global value chains – formed when the different stages of production are located across different countries. Companies attempt to optimise their operations by locating various stages of production across different locations.
+Globalisation – the growing integration and interdependence of people’s lives in a complex process with economic, social (cultural), political and environmental components.
+Greenfield site – land not previously built on and on which new developments are proposed or constructed.
+Import substitution – promotion and development of industries within a country aimed at reducing manufacturing imports.
+Interdependence – interrelationships between ACs, EDCs and LIDCs through trade, FDI, foreign aid and migration.
+Millennium Development Goals – targets set by the UN in 2000 to improve people’s lives in areas such as child mortality, gender equality, poverty and hunger.
+New International Division of Labour – reorganisation of production at the global scale, as a result of deindustrialisation in advanced countries and the global spread of MNCs. This has produced an overall pattern of higher-paid managerial jobs in ACs and lower-paid labouring jobs in LIDCs.
+Outsourcing – cost saving strategy where a company that has comparative advantage provides goods or services for another company even though they could be produced in-house.
+Quota sampling – a type of sampling method that pre-selects a numerical target of samples based on criteria such as age, residence, economic status etc. of respondents.
+Single market – an economic union of countries trading with each other without any internal borders or tariffs.
+Terms of trade – value of a country’s exports relative to that of its imports. This is measured as: average price of exports ÷ average price of imports × 100. If export prices rise relative to import prices, there is improvement in a country’s terms of trade
+Trade liberalisation – the process of making international trade free from barriers such as taxes on imports. The WTO has been instrumental in promoting free trade between member countries and has therefore played an important role in economic globalisation and the expansion of world trade.
+
+Global Migration
+================
+
+Asylum seeker – a person who seeks entry to another country by claiming to be a refugee.
+Balance of payments – difference between a country’s inflows and outflows of money, including all transactions with the rest of the world for goods and services, flows of FDI and migrant remittances, over a period of time.
+Diaspora – the spread of an ethnic or national group from their homeland, e.g. Jews from Israel or Kurds from Kurdistan.
+Economic migrant – a person who moves from another country, region or place, involving a permanent or semi-permanent change of residence, to improve their standard of living or job opportunities.
+Emigration – out-migration of people from a country, which involves permanent change of residence.
+Granular disintegration – the breakdown of rocks by weathering into coarse, granular particles.
+Immigration – in-migration of people into a country, which involves a permanent change of residence.
+Indigenous – something that originates naturally from a particular location.
+International migrant stock – the number of people born in a country other than that in which they live. This also includes refugees.
+Intervening obstacles – physical, economic, social and political factors which may disrupt or terminate a migration at any point between origin and destination.
+Migrant remittances – money transferred from one country to another, sent home by migrants to their family, friends and community.
+Net migration – difference between the number of people moving permanently into an area and out of that area.
+Pull factors – positive attributes of a place or destination which attract migrants.
+Push factors – negative attributes of a migrant’s place of origin which force a migrant to leave.
+Refugee – a person who has moved outside the country of his/her nationality or usual domicile because of genuine fear of persecution or death.
+
+Human Rights
+============
+
+Advanced countries (ACs) – countries that share a number of important economic characteristics, including well-developed financial markets, high degrees of financial intermediation and diversified economic structures with rapidly growing service sectors.
+Alkaloid – a naturally occurring chemical compound. The active ingredient in many medicinal drugs, e.g. morphine.
+Biodiversity – the number of different plant, animal, fungi etc. species in a given area.
+Civil society – NGOs and other organisations that are independent of governments, working voluntarily, either individually or collectively, in support of citizens and communities throughout the world.
+Cumuliform cloud – a cloud formed by convection with a rounded-top, lumpy appearance and flat base.
+Dew – deposits of moisture on the ground and vegetation due to condensation caused by radiative cooling, most often at night.
+Dispersion – the distribution of values in a data set around a central value.
+Dyke – a vertical or near vertical minor intrusion of magma through surrounding older rocks.
+Dynamic equilibrium – a system displaying unrepeated average states through time.
+Equinox – the dates when the Sun is overhead at the Equator (21 March and 21 September) and when the length of day and night are the same everywhere on the planet.
+Fog – cloud at ground level caused by radiative cooling and advection.
+Glycosides – a compound formed from sugar and another compound. Many medicinal drugs are glycosides derived from plants.
+Human rights norms – established customary behaviour based on moral principles and ways of living inculcated into the culture of a country or area over a long period of time.
+Human rights – basic rights and freedoms inherent to all human beings, to which all people are entitled without discrimination.
+Humanitarian intervention – action taken (often by a third-party country or multilateral agency like the UN) in a sovereign state to protect people at risk from war, famine, flood, genocide etc.
+International community – all countries whose identity and sovereignty are recognised under the auspices of the UN, plus other international organisations that choose to participate in global discussions and decision-making and which act collectively to resolve humanitarian issues.
+Intervention – actions of a state, group of states or international organisations in a foreign territory to end gross violations of human rights. This includes military force, economic sanctions and the assistance of NGOs.
+Levées – ridges of coarse deposits found alongside stream channels and elevated above the floodplain.
+Low-income developing countries – countries that are eligible for financial support from the IMF through the Poverty Reduction and Growth Trust.
+Malnutrition – shortages of proteins and essential vitamins caused by an unbalanced diet.
+Normal frequency curve – a symmetrical, bell-shaped frequency curve where most values cluster around the mean.
+Norms – moral principles, customs and ways of living that are universally accepted as standard behaviour.
+Photoperiod – length of day, i.e. from sunrise to sunset.
+Quadrat sampling – a type of spatial sampling employing squares as sampling units. In fieldwork quadrats are often metre-square frames.
+Responsibility to Protect – individual states have the primary responsibility to protect their populations from genocide, war crimes, crimes against humanity and ethnic cleansing.
+Sill – a minor, approximately horizontal, intrusion of magma into surrounding older rocks.
+Social inequality – the unequal distribution of factors such as income, education or health across a population.
+Talik – unfrozen ground.
+Throughfall – rainfall, initially intercepted by vegetation, which drips to the ground.
+Treaty – formally concluded and ratified agreement between states.
+Tundra – treeless region in the sub-Arctic and in high mountains which has a short growing season and severe winter temperatures.
+UN Global Compact – initiative that invites companies to align their strategies and operations according to universal principles on human rights, labour, environment and anti-corruption, and to take actions that advance societal goals.
+Undernutrition – too little food intake to maintain body weight.
+
+Power and Borders
+=================
+
+Cyber conflict – use of the internet, cellular technologies and space-based communications for malevolent and/or destructive purposes in order to change or modify political, military and economic interactions between entities such as states, corporations and individuals.
+Geopolitics – term used in the early twentieth century in the ‘Heartland’ work of Sir Halford Mackinder, referring to ways in which geographical factors were central in shaping international politics.
+Hypothesis – a statement whose validity can be tested using scientific methodology.
+Independence – a situation in which the people of a country exercise selfgovernment and sovereignty over their state territory having gained political freedom from outside control.
+International border – geographical boundary of a sovereign state, defined and recognised by international law, and identified on the political map of the world.
+International law – body of law that governs international relations between states or nations. This provides the framework for the obligations of states to be maintained.
+International treaties – international agreements concluded between states, in written form and governed by international law.
+Multinational corporation – a firm with the power to co-ordinate and control operations in several countries.
+Nation building – processes by which a state government promotes nationality, for example through its education system or the media.
+Nation – large group of people with strong bonds of identity, united by shared descent, history, traditions, culture and language.
+Nation-state – a nation which has its own independent state; the boundaries of the state coincide with the area inhabited by the nation.
+Secession – transfer of part of a state’s area and population to another state.
+Self-determination – right of a group with a distinctive territorial identity to freely determine its political status and freely pursue its economic, social and cultural development.
+Separatism – claims for, or practice of, separation of a group of people from a larger state on the basis of their ethnicity or unified national culture, traditions, religion and language.
+Sovereignty – the absolute authority that independent states exercise in the government of the land and peoples in their territory.
+State apparatus – set of state institutions and organisations through which state power is exercised; these include legal mechanisms, administrative organisations, police and armed forces, and health, education and welfare services.
+State – area of land, of an independent country, with well-defined boundaries, within which there is a politically organised body of people under a single government.
+Superpower – states with a dominant position in the international system capable of exerting their power (economic, cultural, political) globally.
+Territorial integrity – principle that the defined territory of a state, over which it has exclusive and legitimate control, is inviolable. This is enshrined in the Charter of the UN and an important part of international law.
+Territory – extent of land under the jurisdiction of a sovereign state.
+Transnational corporation – very large company with factories and offices in more than one country, which markets products and services worldwide.
+Westphalian model – The Peace of Westphalia (1648) marked the formal recognition of states as sovereign and independent political entities; it established the principle of sovereign equality of states, forming the basis of international law that governs the global political system today.
+
+Climate Change
+==============
+
+Adiabatic expansion – the expansion of a parcel of air due to a decrease in pressure. Expansion causes cooling.
+Advection – the horizontal movement of an air mass which often results in either heating or cooling.
+Albedo – proportion of sunlight reflected from a surface.
+Cap and trade – an internal scheme to control carbon emissions. A marketbased solution to climate change where polluters either cut their emissions or incur extra costs by buying tradable carbon credits.
+Carbon credits – allowances that permit given levels of CO2 emissions by businesses. Excess emissions must by covered by trading carbon credits.
+Cold seeps – low temperature mineral-rich springs flowing from the ocean floor.
+Convection – the motion of a gas or liquid which when warmed rises until eventually it cools and sinks in a continuous circulation.
+Dew point – the critical temperature at which condensation occurs.
+Greenhouse gas – gases in the atmosphere such as CO2 , CH4 and water vapour which absorb long-wave terrestrial radiation.
+Heat balance – the difference between inputs of solar energy to the Earth– atmosphere system and energy outputs from terrestrial radiation and gases in the atmosphere. Currently inputs exceed outputs and the global climate responds by warming.
+Heat island – elevated temperatures found in large urban areas caused by emissions of heat, low albedo of urban surfaces, air pollution etc.
+IPCC – Intergovernmental Panel on Climate Change is a body made up of hundreds of scientists from around the world who research and regularly report on climate change.
+Interval scale – a numerical scale in which zero is arbitrary (e.g. temperature).
+Island arc – chain of volcanic islands formed along a subduction zone.
+Microclimate – local climates whose main characteristics are determined by topography and land use.
+Non-renewable resources – resources that are finite on human timescales. Once used they cannot be replaced, e.g. fossil fuels and minerals.
+Renewable resource – a resource capable of regeneration on human timescales, such as most forests and fish stocks.
+Solar output – the amount of radiant energy emitted by the Sun and intercepted by the Earth. Most solar output is short-wave.
+Temperature inversion – an increase in temperature with height, i.e. the reverse of the normal temperature profile.
+Tipping point – the critical point or threshold which if passed leads to irreversible change, e.g. the moment when summer sea ice in the Arctic disappears, which would alter the Atlantic thermohaline circulation.
+
+Disease Dilemmas
+================
+
+Communicable disease – an infectious disease that spreads from host to host.
+Contagious diffusion – the process by which a disease spreads through direct contact with a carrier.
+Contagious disease – a disease spread by contact or indirect contact between people, e.g. Ebola.
+Diffusion – the process by which a disease spreads outwards from its geographical source.
+Epidemic – a disease outbreak that spreads quickly through the population of a geographical area.
+Epidemiology – the study of how and why diseases occur in different groups of people.
+Expansion diffusion – the process by which a disease spreads outwards into a new area while carriers in the source area remain infected.
+Hierarchical diffusion – the process by which a disease spreads through a structured order of places, e.g. from major cities to towns and villages.
+Host – an animal that sustains a reservoir for pathogens such as bacteria and viruses, e.g. bats and rabies.
+Infant mortality rate – annual number of deaths of infants under one year old per 1000 live births.
+Infectious disease – a disease spread by parasites, bacteria, viruses, fungi etc.
+Maternal mortality rate – annual number of deaths of women while pregnant, or within 42 days of termination of pregnancy, from any cause related to or aggravated by the pregnancy or its management. Measured per 100,000 live births.
+Non-communicable disease – a disease that cannot be spread between people, e.g. diabetes.
+Non-infectious disease – a non-communicable disease due to age, genetic defects, e.g. cancer.
+Nutrition spectrum – a scale of diet and nutrition that marks critical thresholds in human health, e.g. starvation and obesity.
+Pandemic – an epidemic which spreads worldwide, e.g. Spanish flu
+Relocation diffusion – the process by which a disease spreads into a new area and evacuates its area of origin.
+Vector – a carrier, e.g. mosquitoes, that transmits an infectious disease, e.g. malaria.
+
+Exploring Oceans
+================
+
+Abyssal plain – the deepest part of the ocean covering vast areas of ocean floor. Submarine mountain chains and trenches interrupt the relatively flat plain.
+Agro-ecosystems – an ecosystem that is managed to produce food.
+Anthropocene – the current geological period where humankind is the main driver of environmental change.
+Biopiracy – the exploitation of medicinal drugs from wild environments by pharmaceutical companies with little or no benefit to indigenous people.
+Continental rise – gently sloping ocean floor between the continental slope and the abyssal plain.
+Continental slope – where the continental shelf becomes steeper as it descends to the deep ocean.
+Coral bleaching – the loss of algae (which give coral its colours) from coral due to an increase in water temperature.
+Downwelling – the sinking of dense, salty (or cold) water in the oceans.
+Flow resources – renewable natural resources that can be used and are replenished at the same time, e.g. solar, wind and tidal energy.
+Guyot – flat-topped seamount with its summit well below the ocean surface. Many appear to have volcanic origin, having formed at midocean ridges.
+Gyre – a very large circulation of surface water between 20° and 30° N and S in the oceans.
+Halocline – the depth in the ocean where there is a rapid change in salinity of sea water.
+Krill – small, shrimp-like crustacea that feed on plankton and are then themselves a major source of food for other organisms
+Marine snow – the remains of organisms living in the ocean’s upper layer which falls to deeper water. It represents an important transfer of energy from the photic zone to the ocean depths.
+Mid-ocean ridge – the boundary between two diverging oceanic plates. It consists of two parallel chains of submarine mountains separated by a graben, and offset in places by transform faults.
+Natural capital – natural resources with a value to humans.
+Natural income – annual yield from natural resources such as timber, fish, plants and mineral ores.
+Non-point source pollution – release of pollutants from numerous, dispersed sources, e.g. gases from vehicles or ships or chemical run-off from agriculture.
+Ocean conveyor belt – see thermohaline circulation.
+Ocean currents – the large scale horizontal flow of ocean water (at the surface and at depth) driven by planetary winds and contrasts in water temperature and salinity.
+Ocean trench – narrow deep depression on the ocean floor adjacent to a subduction zone.
+Pelagic – the environment of the open ocean but not including the ocean floor.
+Phytoplankton – tiny photosynthesising marine organisms in the surface waters of the oceans.
+Point source pollution – release of pollutants from a single clearly identifiable source, e.g. a factory chimney or sewage pipe.
+Pollution – the process by which human activity contaminates the environment, with adverse effects on the quality of air, water etc. and the health of people and other organisms.
+Salinity – level of concentration of dissolved salts in water expressed as parts per thousand.
+Sea-floor spreading – lateral movement of new oceanic crust away from a mid-ocean ridge (constructive plate boundary). A key process in the theory of continental drift.
+Seamount – a volcanic peak rising steeply from the ocean floor. Some are isolated while others occur in chains extending away from a mid-ocean ridge or hot spot.
+Sink – anything that absorbs more of a particular substance than it releases, e.g. the oceans act as a sink for CO2 .
+Thermohaline circulation – the global pattern of ocean currents (surface and sub-surface) driven primarily by differences in temperature and salinity.
+Tragedy of the commons – a metaphor illustrating how individuals can overexploit a resource in common ownership (e.g. the atmosphere, fish in the deep ocean), leading to its depletion or degradation.
+Trench – a narrow, deep depression on the ocean floor, adjacent to a subduction zone.
+
+Future of Food
+==============
+
+Agribusiness – a large scale farming practice run on business lines.
+Farmers’ markets – a market where local farmers sell their produce directly to the consumer.
+Food chain – a series of organisms through which food energy moves before it is completely expended.
+Food miles – the distance food items travel from farmer to consumer.
+Food security – when there is access to sufficient food for individuals to lead a healthy life.
+Food web – a series of food chains linked together across different trophic levels within an ecosystem.
+Genetically modified crops – genetic engineering applied to food crops to increase production, quality, and resistance to disease or drought.
+Land degradation – the deterioration of land suitability for agriculture by soil erosion, desertification and salinisation.
+Land grabbing – a process whereby rich countries acquire land in poorer countries.
+Loam – soil with a balanced textural composition of sand, silt and clay.
+Monoculture – the cultivation of a single crop.
+Overcultivation – cultivation which, given environmental resources, is not sustainable in the long term and is evidenced by declining yields, soil exhaustion and soil erosion.
+Overnutrition – prolonged excessive food intake, which increases body weight.
+Permaculture – sustainable, high yielding and intensive agriculture based on natural processes.
+Polyculture – the cultivation of several different crops, often simultaneously in the same field.
+Primary sector – economic activities that produce food, fuel and raw materials, e.g. agriculture, forestry, fishing, mining, quarrying and water supplies.
+Salinisation – the accumulation of salts in soil.
+Shifting cultivation – a traditional method of cultivation in tropical forests which involves rotation of land rather than rotation of crops.
+often as a thin film – when the soil is saturated.
+
+Hazardous Earth
+===============
+
+Asthenosphere – the layer in the Earth’s mantle below the lithosphere. The high temperatures cause the rocks to soften and become viscous meaning that they can easily deform.
+Benioff zone – boundary between a subducting ocean plate and the overriding continental plate at a destructive boundary.
+Black smoker – hydrothermal vent on the ocean floor at constructive or destructive plate boundaries. The water carries high amounts of metal sulphides.
+Caldera – large-scale volcanic crater formed as a result of an explosive eruption which emptied the magma chamber causing the volcano sides to subside.
+Caprock – a resistant layer of rock often on a plateau-like surface, which protects older weaker rocks from denudation.
+Composite cone volcano – see strato-volcano.
+Cryptobiotic crust – communities of cyanobacteria, fungi, lichens and mosses which form a fragile surface layer in drylands.
+Disaster – natural hazards (e.g. earthquakes, floods) that result in major loss of life, injury and economic damage.
+Earthquake focus – point in the crust where rocks fracture, releasing energy.
+Effusive eruption – a gentle free-flowing basic eruption of lava, e.g. basalt.
+Epicentre – point at the surface directly above an earthquake focus.
+Explosive eruption – a violent eruption owing to the build-up of pressure within a volcano, due to viscous magma (e.g. andesite) preventing the escape of gases (especially steam).
+Friedmann’s core-periphery model – four-stage model of spatial economic development where development is initially concentrated in the economic core and eventually diffuses to the periphery.
+Graben – the downfaulted section of a rift valley.
+Hot spot – an area of intense volcanic activity where a mantle plume reaches the Earth’s surface causing eruptions. Located away from plate boundaries, e.g. Hawaii.
+Isostatic changes – changes in the absolute level of the land. They are localised and result from either tectonic activity or the addition or removal of weight from the land.
+Isostatic – relating to vertical movements of the Earth’s crust.
+Lithosphere – layer in the Earth’s mantle above the asthenosphere together with the crust which is divided into a series of tectonic plates. The lithosphere is rigid and is moved by the flows of semi-molten rock in the asthenosphere.
+Median – the middle value in a data set where values are ranked in order of magnitude.
+Modified Mercalli scale – a subjective measure of earthquake intensity using factors such as what was felt by people and the type and scale of damage to buildings and infrastructure.
+Moho – short for Mohoroviĉić discontinuity, the boundary between the crust and mantle. It lies at c 35 km beneath the continents and 10–15 km beneath the ocean floor.
+Moment Magnitude Scale (Mw) – a measure of earthquake strength using the amount of physical movement caused by a quake.
+Phreatic – an eruption of steam from a volcano caused when groundwater meets magma.
+Pillow lava – rounded mounds of lava erupted along mid-oceanic ridges, which cool rapidly on contact with sea water.
+Pluton – mass of igneous rock injected into overlying rock deep in the crust.
+Quartile – a quarter part of a data set ranked in order of size or magnitude.
+Resilience – the degree to which an area can recover from the impacts of a hazard. The level of vulnerability affects a community’s resilience.
+Richter scale – system measuring the magnitude of an earthquake by using the energy released when overstrained rocks suddenly fracture. Uses a logarithmic scale, with just over 9.0 being the largest quake measured to date.
+Rift valley – a valley formed by downfaulting between parallel faults. Examples are found on land (East African Rift Valley) and along midoceanic ridges.
+Seismic – relates to earthquakes or other movements of the Earth and its crust.
+Shield volcano – a volcano with a broad base and gently sloping sides. It forms from the effusive eruption of fluid basalt lava.
+Storm surge – elevated sea surface near the coast most often caused by extreme storms (e.g. hurricanes) and tsunamis.
+Strato-volcano – a steep-sided volcano made up of layers of lava and ash emitted during explosive eruptions. Also known as a composite cone.
+Subduction – the tectonic process found at convergent plate margins where an oceanic plate descends into the Earth’s mantle and is destroyed.
+Super-volcano – a volcano that erupts more than 1000 km3 of material in a single eruption event.
+Tectonic plate – a large slab of the Earth’s lithosphere and crust.
+Transform faults – large-scale faults in the crust at right angles to a midocean ridge, which range from a few tens of kilometres to several hundred. Earthquakes occur along their lengths as they slip.
+Upper mantle – the layer of the Earth’s interior extending 75–200 km below the surface (also known as the asthenosphere). The upper mantle is able to flow under pressure.
+Venture capital – investment in small or medium sized enterprises involving relatively high levels of risk but with the potential for significant gains. The enterprises are those not yet secure enough to raise their own finance.
+Viscosity – an indication of how well a substance flows. Acid lavas have high viscosity as they are sticky and do not flow far from a vent.
+Volcanic Explosivity Index (VEI) – combines magnitude and intensity of an eruption on a logarithmic scale, 0 = least explosive, 8 = most explosive.
+Vulnerability – measure of the level of risk an area faces from the impacts of a hazard. Levels of vulnerability are influenced by physical, social, economic and political factors.
+
+Geographical Skills / General
+=============================
+
+Archipelago – a closely grouped cluster of islands.
+Aspect – the direction a slope faces.
+Bioluminescence – the ability of some organisms to generate light from their bodies.
+Canopy – the uppermost layer of treetops and branches in a forest or woodland ecosystem.
+Capital intensive – high levels of investment in manufacturing in plant and machinery per employee.
+Capital – accumulated wealth of any kind used in producing more wealth; this may include tangibles such as machinery, buildings, land, and intangibles such as money, investment finance, company stocks.
+Central tendency – the middle value in a data set, e.g. mean, median, mode.
+Cumulative frequency curve – a frequency curve that shows the proportion of data above (or below) a specific threshold (e.g. zero).
+Debris flow – mass movements of coarse boulders, mud, timber etc. in channels following periods of torrential rainfall.
+Distributaries – small branching stream channels that flow away from a main stream or river.
+Equilibrium – a long-term balance between inputs and outputs in a system.
+Ferrous minerals – minerals with a significant iron content, e.g. iron ores.
+Flow map – a numerical map that represents the movement of people, goods or information by lines where widths are proportional to flows.
+Forced labour – when people are coerced to work through use of violence or intimidation, or by more subtle means of detention such as retention of identity papers.
+Frequency distribution curve – a type of line graph showing the distribution of values in a data set by classes or categories.
+Geographic Information Systems (GIS) – integrated computer tools for gathering, storing, processing and analysing geographical data that can be plotted on maps.
+Geomorphic – relating to the formation and shaping of landforms and landscapes by natural processes.
+Gini coefficient – a statistical measure of the degree of similarity between two sets of percentage data.
+Globesity – the widespread increase in excess average weight due to poor diet and lack of exercise.
+Household – one person living alone, or a group of people (not necessarily related) living at the same address.
+Interpolation – the insertion of isolines (e.g. contours) to a point pattern which assumes that the gradient of change between fixed points is constant.
+Landscape – the visible features (landforms) of an area of the Earth’s surface.
+Lithology – the chemical and physical characteristics of rock types.
+Mode – the class of values that occurs most frequently in a data set.
+Nominal – when data is classified into categories.
+Non-ferrous minerals – minerals that do not contain iron, e.g. manganese and copper.
+Ordinal scale – a numerical scale where values are represented by their rank order in a data set.
+Pinch points – a point where congestion is likely to occur.
+Pluvial – a climatic period associated with higher rainfall and more humid conditions in the recent geological past.
+Quantitative data – information that can be measured in terms of numbers and/or frequencies.
+Rain shadow – an area of below average precipitation situated in the lee of an upland.
+Random sampling – a type of sampling that uses random numbers and where every individual in a population has an equal chance of inclusion in the sample.
+Ratio scale – a numerical scale that has a meaningful zero value.
+Secondary data – data which have been processed/and or published, e.g. books, articles, blogs etc.
+Skewness – the extent to which a frequency curve deviates from a normal, symmetrical pattern.
+Standard deviation – the most mathematical measurement of dispersion in a data set (i.e. the root mean square deviation).
+Standard error of the mean – the standard deviation of a sampling distribution.
+Statistical significance – the likelihood that the outcome from a sample survey is not due to chance. It is normally set at 95% probability.
+Stratified sampling – a sample drawn from a heterogeneous statistical population divided into groups.
+Stratiform clouds – clouds lying in a level sheet.
+Structure – the physical characteristics of rocks, including their jointing, bedding, faulting, angle of dip etc.
+Symbiosis – the close association between two or more organisms of different species, often but not necessarily benefiting each member.
+Syncline – a downfolded, basin-like geological structure.
+System – a group of objects and the relationships between them.
+Tree line – The latitudinal and altitudinal limit of tree growth.
+Turbidity – the cloudiness of a fluid caused by large numbers of individual particles in suspension.
+‘Just in time’ (JIT) – a system companies use to increase efficiency and decrease storage costs and waste. Products are delivered immediately (just) as they are required.

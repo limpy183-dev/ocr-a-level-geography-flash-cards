@@ -659,6 +659,30 @@ body::before {
     border: 1px solid rgba(239, 68, 68, 0.15);
 }
 
+.score-fsrs-again {
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.score-fsrs-hard {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.score-fsrs-good {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.score-fsrs-easy {
+    background: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
 .score-remaining {
     background: var(--glass-bg);
     color: var(--text-muted);
@@ -1361,4 +1385,86 @@ body::before {
         width: 11px;
         height: 11px;
     }
+}
+
+/* === FSRS EXTRA STYLES === */
+.fsrs-toggle-label {
+    user-select: none;
+}
+
+.fsrs-toggle-label input {
+    display: none;
+}
+
+.fsrs-judge-row {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fsrs-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--bg-layer-2);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 90px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fsrs-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fsrs-again {
+    border-bottom: 3px solid #ef4444;
+}
+
+.fsrs-hard {
+    border-bottom: 3px solid #f59e0b;
+}
+
+.fsrs-good {
+    border-bottom: 3px solid #10b981;
+}
+
+.fsrs-easy {
+    border-bottom: 3px solid #3b82f6;
+}
+
+.fsrs-again:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.fsrs-hard:hover {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.fsrs-good:hover {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.fsrs-easy:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.fsrs-label {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.fsrs-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
 }

@@ -38,6 +38,15 @@ async function authLogout() {
     if (error) throw error;
 }
 
+async function resendConfirmationEmail(email) {
+    const { data, error } = await supabaseClient.auth.resend({
+        type: 'signup',
+        email: email
+    });
+    if (error) throw error;
+    return data;
+}
+
 async function getUser() {
     const { data: { user } } = await supabaseClient.auth.getUser();
     return user;
@@ -56,7 +65,7 @@ class StudyTracker {
         this.userId = userId || 'guest';
         this.storageKey = `flashcard_user_${this.userId}`;
         // Initialize with empty default data
-        this.data = { sessions: [], reviews: [] };
+        this.data = { sessions: [], reviews: [], fsrs: {} };
     }
 
     // NEW: Async load function to handle Cloud vs Local
@@ -114,7 +123,7 @@ class StudyTracker {
     /**
      * Log a completed study session.
      */
-    logSession(topicId, topicName, knownCount, unknownCount, totalCount) {
+    logSession(topicId, topicName, knownCount, unknownCount, totalCount, fsrsCounts = null) {
         this.data.sessions.push({
             topicId,
             topicName,
@@ -122,9 +131,23 @@ class StudyTracker {
             unknown: unknownCount,
             total: totalCount,
             score: Math.round((knownCount / totalCount) * 100),
-            date: new Date().toISOString()
+            date: new Date().toISOString(),
+            fsrsCounts
         });
         this._save();
+    }
+
+    getFsrsDistribution() {
+        let again = 0, hard = 0, good = 0, easy = 0;
+        this.data.sessions.forEach(s => {
+            if (s.fsrsCounts) {
+                again += s.fsrsCounts.again || 0;
+                hard += s.fsrsCounts.hard || 0;
+                good += s.fsrsCounts.good || 0;
+                easy += s.fsrsCounts.easy || 0;
+            }
+        });
+        return [again, hard, good, easy];
     }
 
     /**
@@ -138,6 +161,52 @@ class StudyTracker {
             date: new Date().toISOString()
         });
         this._save();
+    }
+
+    /**
+     * FSRS Review
+     */
+    logFsrsReview(topicId, term, rating) {
+        if (!this.data.fsrs) {
+            this.data.fsrs = {};
+        }
+        if (!this.data.fsrs[topicId]) {
+            this.data.fsrs[topicId] = {};
+        }
+
+        const cardState = this.data.fsrs[topicId][term] || null;
+        const newState = fsrs.review(cardState, rating);
+
+        this.data.fsrs[topicId][term] = newState;
+
+        // Also log as a standard review for stats (known = rating > 1)
+        this.logCardReview(topicId, term, rating > 1);
+
+        // _save() is called by logCardReview so no need to call it again
+    }
+
+    /**
+     * Get Due Cards for a topic
+     */
+    getDueCards(topicId, allCards) {
+        if (!this.data.fsrs) this.data.fsrs = {};
+        if (!this.data.fsrs[topicId]) return allCards; // All are new/due
+
+        const now = new Date();
+        const dueCards = [];
+
+        allCards.forEach(card => {
+            const state = this.data.fsrs[topicId][card.term];
+            if (!state) {
+                // New card
+                dueCards.push(card);
+            } else if (new Date(state.due) <= now) {
+                // Due for review
+                dueCards.push(card);
+            }
+        });
+
+        return dueCards;
     }
 
     // ---- AGGREGATION METHODS ----
